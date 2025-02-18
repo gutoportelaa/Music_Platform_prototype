@@ -46,6 +46,7 @@ export default App2;
 
 // Tag vazia em React é chamada de Fragmento, usado pq o React retorna apenas um Elemento.
 // Então fragmentamos o retorno em vários elementos, mas sem criar um elemento pai.
+
 // <> </> ou <React.Fragment> </React.Fragment>
 
 // Componentes recebem "props" e retornam(ou n) algo, props = propriedades/parâmetros das funções

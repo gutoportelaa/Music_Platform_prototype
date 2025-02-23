@@ -1,5 +1,4 @@
 :root {
-
   --green-50: hsl(141deg 75% 90%);
   --green-100: hsl(141deg 75% 85%);
   --green-200: hsl(141deg 75% 70%);
@@ -41,7 +40,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 img {
@@ -106,6 +105,10 @@ img {
 .item-list__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+}
+
+.item-list__link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 480px) {

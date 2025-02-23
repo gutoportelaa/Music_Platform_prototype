@@ -2,7 +2,6 @@
 
 /*  */
 :root {      /*  movimento dinâmico de translação*/
-
   --green-50: hsl(141deg 75% 90%);
   --green-100: hsl(141deg 75% 85%);
   --green-200: hsl(141deg 75% 70%);
@@ -187,4 +186,10 @@ a {
   .single-item__texts {
     gap: 0;
   }
+}
+
+.item_list__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

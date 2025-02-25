@@ -4,25 +4,25 @@ import { artistArray } from "../assets/database/artists";
 import { songsArray } from "../assets/database/songs";
 
 
-const Main = () => {
+const Main = ({type}) => {
   return (
-    <div className="main">
+    <div className="main"> 
       {/* Item List de Artistas */}
-      <ItemList title="Artistas"
-       items= {6} 
-       itemsArray = {artistArray} 
-       path='/artistas'
-       idPath = '/artist'
-       />
+      {type === 'artistas' ||type === undefined ? <ItemList title="Artistas" 
+      items={6} 
+      itemsArray={artistArray} 
+      path='/artistas' 
+      idPath='/artist' /> : <></>}
+
+
 
       {/* Item List de Músicas */}
-      <ItemList title="Musicas"
+      {type === 'songs' || type === undefined ? <ItemList title="Musicas"
        items= {12} 
        itemsArray = {songsArray} 
-       path='/musicas'
-       idPath= '/music'
+       path='/songs'
+       idPath= '/music' /> : <></>}
 
-       />
 
       
     </div>

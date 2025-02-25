@@ -1,12 +1,17 @@
 import React from 'react'
-import { artistArray } from '../assets/database/artists'
 import SingleItem from './SingleItem'
-import { songsArray } from '../assets/database/songs'
-import { Link } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 
 const ItemList = ({title, items, itemsArray, path, idPath}) => {
+    //  const pathname = useLocation()
+    //  console.log(location)
+    //  console.log(title, items)
+    const pathname = useLocation().pathname
+    // console.log(pathname)
+    const isHome = pathname === '/'
+    const finalItems = isHome ? items :  Infinity
 
-//  console.log(title, items)
+
   return (
           <div className="item-list">
             <div className="item-list__header">
@@ -18,7 +23,7 @@ const ItemList = ({title, items, itemsArray, path, idPath}) => {
     
             <div className="item-list__container">
             {itemsArray
-            .filter((currentValue, index) => index < items)
+            .filter((currentValue, index) => index < finalItems)
             .map((currentObj, index) => (<SingleItem idPath = {idPath} {...currentObj} key={`${title}-${index}`}/>
             ))}
 
